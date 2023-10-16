@@ -11,12 +11,12 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleFeedback = type => {
+  handleFeedback = option => {
+    // {
+    //   option === 'good' ? alert('❤❤❤') : alert('😞😞😞');
+    // }
     this.setState(prevState => {
-      const updatedState = {};
-      updatedState[type] = prevState[type] + 1;
-
-      return updatedState;
+      return { [option]: prevState[option] + 1 };
     });
   };
 
